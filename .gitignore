@@ -1,0 +1,13 @@
+#过滤target文件下生成的编译文件
+target/
+.project
+.settings/
+.classpath
+*.MF
+.idea
+*.iml
+/bin/
+/spring-cloud-hystrix-dashboard/*.cmd
+/spring-cloud-hystrix-dashboard/.mvn/wrapper/*.jar
+/spring-cloud-hystrix-dashboard/mvnw
+*.jar
