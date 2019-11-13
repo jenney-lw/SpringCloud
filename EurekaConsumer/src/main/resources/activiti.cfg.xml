@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+	    http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd ">
+
+    <!-- 定义一个id为processEngineConfiguration的流程引擎配置类，然后为它设置属性值 -->
+    <bean id="processEngineConfiguration"
+          class="org.activiti.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+        <!-- 数据库连接配置 -->
+        <property name="jdbcUrl" value="jdbc:mysql://127.0.0.1:3306/lw?useUnicode=true&amp;characterEncoding=utf8&amp;jdbcCompliantTruncation=true&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true&amp;serverTimezone=UTC"></property>
+        <property name="jdbcDriver" value="com.mysql.jdbc.Driver"></property>
+        <property name="jdbcUsername" value="root"></property>
+        <property name="jdbcPassword" value="leadhxyh@126"></property>
+        <!-- 建表策略 -->
+        <property name="databaseSchemaUpdate" value="true"></property>
+        <!-- 其它省略 -->
+    </bean>
+</beans>
