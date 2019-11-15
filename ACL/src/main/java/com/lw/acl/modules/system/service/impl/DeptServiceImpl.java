@@ -67,6 +67,8 @@ public class DeptServiceImpl implements DeptService {
 
             if (isChild) {
                 depts.add(deptDTO);
+            } else if (!deptNames.contains(deptRepository.findNameById(deptDTO.getPid()))){
+                depts.add(deptDTO);
             }
         }
 
